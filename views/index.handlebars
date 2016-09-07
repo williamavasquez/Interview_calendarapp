@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Fitness App</title>
+    <title>Interview Calendar App</title>
     <!-- below this is the links for the modal -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -22,6 +22,25 @@
     <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
     <!-- <script src="assets/js/vendor/modernizr.js"></script> -->
   </head>
+  <body>
+    <div class="container">
+
+    <h1>Interview Calendar Application</h1>
+
+    <button type="button" class = "btn btn-primary btn-lg" name="button">Add Event</button>
+    <br>
+    <br>
+
+    <!-- Search FORM -->
+    <form class="form-inline" action="index.html" method="post">
+      <input type="text" class="form-control" id="searchF" placeholder="Search for your Events">
+      <button type="submit" class="btn btn-primary"  name="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Submit</button>
+    </form>
+    <br>
+    <br>
+    <!-- end of search FORM -->
+
+
 
   <form class="form center-block" action="/calendersave" method="POST">
     <div class="form-group">
@@ -38,7 +57,8 @@
     </div>
   </form>
 
-  <script type="text/javascript">
-  </script>
+
+
+</div> <!-- end of container -->
 </body>
 </html>

@@ -1,5 +1,5 @@
 CREATE DATABASE willinterview;
-use willinterview
+use willinterview;
 
 CREATE TABLE calender
 (

@@ -1,12 +1,20 @@
 {
-  "name": "newproject",
+  "name": "interviewcalapp",
   "version": "1.0.0",
   "description": "awesome app",
   "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3"
+    "cookie-parser": "^1.4.3",
+    "dateformat": "^1.0.12",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.1",
+    "method-override": "^2.3.6",
+    "mongojs": "^2.4.0",
+    "mysql": "^2.11.1",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,6 +22,14 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "William Vasquez",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamavasquez/Interview_calendarapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/williamavasquez/Interview_calendarapp/issues"
+  },
+  "homepage": "https://github.com/williamavasquez/Interview_calendarapp#readme"
 }

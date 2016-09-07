@@ -2,10 +2,9 @@
 var express = require('express');
 var router = express.Router();
 var dateFormat = require('dateformat');
-
 var calender = require('../models/calender.js');
-
 var connection = require('../config/connection.js');
+var bodyParser = require('body-parser');
 
 router.get('/', function(req,res){
   res.render("index")
@@ -26,6 +25,10 @@ router.post('/calendersave', function(req, res){
 
 });
 
-
+router.get('/test', function(req, res){
+  calender.all(function(data){
+      res.json(data)
+    })
+  })
 
 module.exports = router;
