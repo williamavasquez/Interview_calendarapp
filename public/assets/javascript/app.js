@@ -19,7 +19,8 @@ $("document").ready(function(){
         });
 
     } else {
-
+      
+      $("#searchTerm").html("<h2>You Searched:   "+ searchText+"</h2>")
       console.log(searchText);
     }
   })
@@ -37,29 +38,6 @@ $("document").ready(function(){
       $(".hiddenBtns").hide();
 
     }) //end of cancelBtn function
-    // 
-    // $("#submitFormbtn").on("click",function(){
-    //   var date = $('#date').val();
-    //   var time = $('#time').val();
-    //   var description = $('#description').val();
-    //
-    //   data = {
-    //     "date": date,
-    //     "time": time,
-    //     "description": description
-    //     }
-    //   $.post("/calendersave", data).done(function(){
-    //       $('#date').val("");
-    //       $('#time').val("");
-    //       $('#description').val("");
-    //
-    //       $("#addEventBtn").show();
-    //       $("#addEventForm").hide();
-    //       $(".hiddenBtns").hide();
-    //     });
-    //
-    // })
-
 
 
 }) //end of document.ready
