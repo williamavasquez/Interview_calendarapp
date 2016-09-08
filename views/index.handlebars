@@ -27,36 +27,49 @@
 
     <h1>Interview Calendar Application</h1>
 
-    <button type="button" class = "btn btn-primary btn-lg" name="button">Add Event</button>
+
+
+    <button type="button" class = "btn btn-primary btn-lg" name="button" id="addEventBtn">Add Event</button>
     <br>
     <br>
 
     <!-- Search FORM -->
-    <form class="form-inline" action="index.html" method="post">
+    <form class="form-inline" >
       <input type="text" class="form-control" id="searchF" placeholder="Search for your Events">
-      <button type="submit" class="btn btn-primary"  name="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Submit</button>
+      <button class="btn btn-primary"  id="searchBtn" name="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Submit</button>
     </form>
     <br>
     <br>
     <!-- end of search FORM -->
 
+    <!-- hidden buttons for add and cancel -->
+    <div class="hiddenBtns">
+      <button type="button" class= "btn btn-lg btn-success" name="button" id="submitFormbtn"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Add</button>
 
+      <button type="button" class="btn btn-lg btn-default" name="button" id="cancelBtn"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>  Cancel</button>
+    </div>
+    <!-- end of hidden buttons "Add" and "cancel" -->
 
-  <form class="form center-block" action="/calendersave" method="POST">
-    <div class="form-group">
-      <input type="text" class="form-control input-lg" placeholder="date" name="date">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control input-lg" placeholder="time" name="time">
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control input-lg" placeholder="description" name="description">
-    </div>
-    <div class="form-group">
-      <button class="btn btn-primary btn-lg btn-block">Sign Up</button>
-    </div>
-  </form>
+    <br>
+    <br>
 
+    <!-- form for adding events (hidden) -->
+    <div class="" id = "addEventForm">
+      <form class="form center-block" action="/calendersave" method="POST">
+        <div class="form-group">
+          <input type="date" class="form-control " placeholder="date" id="date">
+        </div>
+
+        <div class="form-group">
+          <input type="time" class="form-control " placeholder="time" id="time">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control input-lg" placeholder="description" id="description">
+        </div>
+      </form>
+    </div>
+    <!-- end of adding events form -->
 
 
 </div> <!-- end of container -->
