@@ -21,7 +21,7 @@ var source = {
         host: 'uoa25ublaow4obx5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         user: 'x3frb4bh33iiqzfi',
         password: "u92w0nxvi59ql1yn",
-        database: "z0orxyvg23zov0z2"
+        database: "odym4qgj1zo4nx6m"
     }
 }
 
