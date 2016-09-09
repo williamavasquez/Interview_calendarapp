@@ -1,4 +1,14 @@
+
 # Interview Calendar App:
+
+###  https://shrouded-caverns-32243.herokuapp.com/
+
+## no need for launching the app, if you wish to do so locally please do the following
+
+* clone the repo
+* run npm install
+* update the connection.js in the Config folder
+* run the server.js file
 
 ### PROJECT REQUIREMENTS :
 
