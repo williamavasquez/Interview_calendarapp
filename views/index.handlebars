@@ -19,8 +19,10 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
 
-    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <!-- <script src="assets/js/vendor/modernizr.js"></script> -->
+    <!-- table library -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" media="screen" title="no title">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" media="screen" title="no title">
+
   </head>
   <body>
     <div class="container">
@@ -72,9 +74,16 @@
     <!-- end of adding events form -->
 
     <!-- table showing searched appointments -->
-      <div class="container-fluid" id="searchTerm">
-        <h2></h2>
-
+      <div class="container" id="searchTerm">
+        <table class="eventTable">
+          <thead>
+             <tr>
+                 <th>Date</th>
+                 <th>Time (24h)</th>
+                 <th> Description</th>
+             </tr>
+         </thead>
+        </table>
       </div>
     <!-- end of table showing appointments -->
 

@@ -25,9 +25,20 @@ router.post('/calendersave', function(req, res){
 
 router.get('/allevents', function(req, res){
   calender.all(function(data){
-    console.log(data[0].date);
       res.json(data)
     })
   })
+
+router.get('/search/:id', function(req,res){
+    sTerm = req.params.id
+
+    console.log(sTerm);
+
+    calender.findMany(sTerm, function(data){
+      console.log(data);
+      res.json([data])
+    })
+
+})
 
 module.exports = router;

@@ -28,6 +28,7 @@ app.set('view engine', 'handlebars');
 var profileRoutes = require('./controllers/calender.js');
 
 app.use('/', profileRoutes);
+app.use('/search',profileRoutes)
 
 var PORT = process.env.PORT || 3000;
 

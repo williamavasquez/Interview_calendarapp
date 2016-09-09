@@ -25,10 +25,15 @@ function objToSql(ob){
 }
 
 var orm = {
-    findOne: function(tableInput, condition, cb) {
+    findMany: function(tableInput, col, condition,  cb) {
+      //  SELECT * FROM  (TABLE NAME)  Where (COlumn NAME) LIKE  '%String%';
+
+
         var queryString = 'SELECT * FROM ' + tableInput;
         queryString = queryString + ' WHERE ';
-        queryString = queryString + condition;
+        queryString = queryString + col + ' like ' + '"%'+condition+'%";';
+        console.log(queryString);
+
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             cb(result[0]);

@@ -5,8 +5,8 @@ Here is where you setup a model for how to interface with the database.
 var orm = require('../config/orm.js');
 
 var user = {
-    findOne: function(condition, cb) {
-        orm.findOne('calender', condition, function(res) {
+    findMany: function(condition, cb) {
+        orm.findMany('calender', 'description', condition, function(res) {
             cb(res);
         });
     },
