@@ -12,7 +12,7 @@ var source = {
         host: 'localhost',
         user: 'root',
         password: "1123581321w",
-        database: "willinterview"
+        database: "stwdb"
     },
 
     // jawsDB

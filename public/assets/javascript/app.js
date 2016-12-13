@@ -13,18 +13,41 @@ $("document").ready(function(){
     var searchText = $("#searchF").val();
     $("#searchTerm").show();
 
+// *************************************************************
+var spreadsheetID = "11cJPysNTLI8NziYjA2wiTHijEQIaMt1CZXDq27OnZso";
+
+// Make sure it is public or set to Anyone with link can view
+var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
+$.getJSON(url, function(data) {
+
+ // var entry = data.feed.entry;
+ // console.log(entry );
+
+ // $(entry).each(function(){
+ //     // Column names are name, age, etc.
+ //   $('.results').prepend('<h2>'+this.gsx$date.$t+'</h2><p>'+this.gsx$totalsteps.$t+'</p>');
+ // });
+
+});
+// **************************************************************
+
     if (searchText=="") {
       // if empty show all the appointments
-      $.get( "/allevents", function( data ) {
+      $.get( url, function( data ) {
+        console.log(data.feed.entry);
+
+
         //display all appointments with DATA
         $('.eventTable').DataTable( {
-          data: data,
+
+          data: data.feed.entry,
         "ordering": false,
         "info":     false,
           columns: [
-        { data: 'date' },
-        { data: 'time' },
-        { data: 'description' },
+        { data: 'gsx$date.$t' },
+        { data: 'gsx$totalsteps.$t' }
+        // { data: 'description' },
             ]
           } );
 
@@ -63,8 +86,9 @@ $("document").ready(function(){
 
     }) //end of cancelBtn function
 
-function getAppointments(){
+    $('.nobacgr').on("click", function(){
+      console.log("fuckyou!")
+    })
 
-}
 
 }) //end of document.ready

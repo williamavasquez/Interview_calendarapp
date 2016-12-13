@@ -3,6 +3,8 @@ var session = require('express-session');
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var exphbs = require('express-handlebars');
+
 
 var app = express();
 
@@ -19,7 +21,7 @@ app.use(bodyParser.urlencoded({
 
 //this allows me to use handlebars
 app.use(methodOverride('_method'))
-var exphbs = require('express-handlebars');
+
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));

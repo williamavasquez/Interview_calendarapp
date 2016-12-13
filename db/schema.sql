@@ -1,3 +1,6 @@
+-- REDO SCHEMA
+
+
 CREATE DATABASE willinterview;
 use willinterview;
 
